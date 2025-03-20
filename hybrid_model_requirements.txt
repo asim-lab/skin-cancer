@@ -1,0 +1,83 @@
+# Hybrid Model with Attention Mechanism for Melanoma Detection
+
+## System Requirements
+- Operating System: Windows, Linux, or macOS
+- Python Version: 3.8 or higher
+- GPU Support: NVIDIA GPU with CUDA support
+
+## Python Dependencies
+Ensure that the following dependencies are installed before running the model. You can install them using the provided `requirements.txt` file.
+
+### Installation Instructions
+
+#### Using `requirements.txt`
+Create a `requirements.txt` file with the following dependencies:
+
+```
+torch>=1.8.0
+torchvision>=0.9.0
+numpy
+matplotlib
+scikit-learn
+```
+
+To install the dependencies, run:
+```bash
+pip install -r requirements.txt
+```
+
+If using a GPU, ensure the correct CUDA version is installed. Replace `cu111` with the appropriate version:
+```bash
+pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111
+```
+For CPU-only usage:
+```bash
+pip install torch==1.8.0 torchvision==0.9.0
+```
+
+## Dataset Preparation
+Ensure that your dataset is structured correctly before running the model.
+
+```
+Dataset/
+├── train/
+│   ├── class_1/
+│   ├── class_2/
+├── test/
+│   ├── class_1/
+│   ├── class_2/
+```
+Modify the dataset path in the script accordingly.
+
+## Running the Model
+
+1. Create a Virtual Environment (Optional but Recommended)
+   ```bash
+   python -m venv env
+   source env/bin/activate  # On Linux/macOS
+   env\Scripts\activate  # On Windows
+   ```
+
+2. Install Dependencies
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Verify PyTorch Installation
+   ```python
+   import torch
+   print(torch.__version__)
+   print(torch.cuda.is_available())  # Should return True if GPU is available
+   ```
+
+4. Run the Training Script
+   ```bash
+   python train.py
+   ```
+
+## Expected Outputs
+- The model will train using a 5-fold stratified cross-validation approach.
+- After training, the best-performing model weights will be saved.
+- Final evaluation metrics such as **Accuracy, Precision, Recall, F1-score, and AUC-ROC** will be printed.
+
+If you encounter any issues, ensure that the dataset is correctly formatted and all dependencies are installed correctly.
