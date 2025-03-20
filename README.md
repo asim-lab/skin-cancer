@@ -1,4 +1,4 @@
-# skin-cancer
+# Hybrid Model with Attention Mechanism for Melanoma Detection
 
 Hybrid Model for Image Classification with Feature Visualization
 This project presents a hybrid deep learning approach for binary image classification, leveraging ResNet-50 and VGG-16 feature extractors with attention mechanisms. It integrates advanced data augmentation, feature visualization, and t-SNE analysis to enhance classification accuracy and model interpretability.
