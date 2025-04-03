@@ -7,6 +7,10 @@ This project presents a hybrid deep learning approach for binary image classific
 
 Traditional image classification models often struggle with feature extraction, leading to misclassification and poor generalization. This project addresses these challenges by fusing deep features from ResNet-50 and VGG-16 while incorporating attention mechanisms to refine the feature representation. The goal is to create a robust and explainable AI model for reliable classification.
 
+## Dataset
+The PH2 dataset can be accessed at https://www.kaggle.com/datasets/athina123/ph2dataset 
+and ISIC 2016-2017 dataset is available at https://challenge.isic-archive.com/data/
+
 ## Methodology
 
 ### 1. Data set and pre-processing
